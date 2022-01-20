@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <title>cl1486 ANLY 501 assignment 2021 FALL Chao Li</title>
+  <meta charset="UTF-8">
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css">
+  <link rel="stylesheet" href="./elements/background.css">
+  <link rel="stylesheet" href="./elements/bar.css">
+   <!-- old version of fontawesome -->
+  <script src="https://kit.fontawesome.com/6b1239f351.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  
+   <!-- css --> 
+  <link rel="stylesheet" href="./elements/demo.css">
+
+</head>
+<body>
+
+
+  <!-- background.html -->
+  <div class="page-container">
+    <div class="section" id="section1">
+
+      <!-- title -->
+      <div class="title">
+        <div class="title-fm">
+          <p><i class="fa fas fa-tree" aria-hidden="true"></i>
+            <i class="fa fas fa-tree" aria-hidden="true"></i>
+            <i class="fa fas fa-tree" aria-hidden="true"></i></p>
+          <p>Decision Tree and Random Forest</p>
+        </div>
+      </div>
+
+      <!-- content -->
+      <!-- <div class="content"> -->
+      <!-- </div> -->
+      
+    </div>
+
+    <div class="section" id="section2">
+      <div class="section-content">
+        <p>Decision Tree (Python on text data)</p>
+        <br>
+        <p class="sub_title"></p>
+        <div class="img_content">
+          <a ><img src="./DecisionTree_Python/Python_data.png" alt="" width="300" height="100"></a>
+          <div class="content-sections">
+            <p class="text1">
+              The whole cryptocurrency market has been diversified into different sub-areas, at least including the "NFT", "Market Capflow", "BTC", "ETH". During this project, the result of the decision tree on tweets provides some key evidence. Some keywords or important features are play, volume, net, and bitcoin, where they are all the keywords belonging to each topic. For example, the "play" represents the culture of "NFT", the "Net" represents the "ETH", "volum" is a high-frequency word in "Capflow" and "bitcoin" is naturally the "BTC".
+            </p>
+            <br>
+            <p class="text1">
+              The boundary between different topics becomes clear although they arose from the same starting. In this project, the main reason why tree decision trees achieve a high precision is because of the distinctive different keywords between different topics. For example, when talking about the NFT, almost all the tweets are discussing a few keywords: airdrop, join, and play, where these keywords nearly are not discussed in other topics. Beyond that, due to the highly concentrated keywords, this gives a good opportunity for the decision tree to achieve such high precision. Therefore, some deeper work can be done on how to classify the tweets, especially in this area.
+            </p>    
+            <br>  
+            <a class="link" href="./DecisionTree_Python/Decision Tree Python.html">View Complete report</a>
+            <a class="link" href="./DecisionTree_Python/cleaned_twitter_withLabel.csv">Download raw data</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section" id="section3">
+      <div class="section-content">
+        <p>Decision Tree (R on record data)</p>
+        <br>
+        <p class="sub_title"></p>
+        <div class="img_content">
+          <a ><img src="./DecisionTree_R/R_data.png" alt="" width="600" height="100"></a>
+          <div class="content-sections">
+            <p class="text1">
+              DEMA and ARRON are both useful key technical indicators when recognizing the time series trend, especially in the high position and steady position. Among 26 technical indicators, the key question is to figure out which technical indicator is useful when recognizing the quotes trend, which may be very important in quantitative analysis on the finance quotes. With this project, “DEMA” and “ARRON” perform well in doing such a job. One of the practical works of this result is that it ould be used as a quantitative trading signal, such as the “Following trading strategy”, where buying in in the high position and selling in the low position.
+            </p>
+            <br>
+            <p class="text1">
+              Predicting market reaction to the high position will be simpler than that to the low position. During the project, no matter the splitting criteria is, cross-entropy loss, GINI, and even information gain, the prediction accuracy on recognizing the low position is lower than the high position. Since this technical signal implies the core reaction of the market emotion, the harder prediction, the more chaos the market is. The result of the project also conforms to the intuition, where it is harder to predict the bottom of the market than predict the top of the market, where it is harder to sell shares in loss than shares in profit Psychologically.
+            </p>  
+            <br>  
+            <a class="link" href="./DecisionTree_R/Decision-Tree-R.html">View Complete report</a>
+            <a class="link" href="./DecisionTree_R/Crypto_quotes_with_change_label.csv">Download raw data</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section" id="section4">
+      <div class="section-content">
+        <p>Random Forest</p>
+        <br>
+        <p class="sub_title"></p>
+        <div class="img_content">
+          <a ><img src="./RandomForest/RF_data.png" alt="" width="450" height="120"></a>
+          <div class="content-sections">
+            <p class="text1">
+              This random forest result supports the application of using ML to predict or identify the market quotes.
+            </p>
+            <br>
+            <p class="text1">
+              This means that, some technical indicators are useful to help identify the position of the current quotes, according to the random forest result, such as "DEMA" and "HT_TrendLine". Especially, from the above result, "DEMA" is one of the most important technical indicators when recognizing the position of the current quotes.
+            </p>  
+            <br>  
+            <a class="link" href="./RandomForest/Random Forest.html">View Complete report</a>
+            <a class="link" href="./RandomForest/Crypto_quotes_with_change_label.csv">Download raw data</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- partial -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script><script  src="./elements/background.js"></script>
+    <!-- background.html end -->   
+    
+    <!-- back botton -->
+    <div class="back-button">
+        <p><a class="back-button" href="/index.html">Back</a></p> 
+    </div>
+
+</body>
+</html>

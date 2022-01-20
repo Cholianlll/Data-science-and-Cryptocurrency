@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <title>cl1486 ANLY 501 assignment 2021 FALL Chao Li</title>
+  <meta charset="UTF-8">
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css">
+  <link rel="stylesheet" href="./elements/background.css">
+  <link rel="stylesheet" href="./elements/bar.css">
+   <!-- old version of fontawesome -->
+  <script src="https://kit.fontawesome.com/6b1239f351.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  
+   <!-- css --> 
+  <link rel="stylesheet" href="./elements/demo.css">
+
+</head>
+<body>
+
+
+  <!-- background.html -->
+  <div class="page-container">
+    <div class="section" id="section1">
+
+      <!-- title -->
+      <div class="title">
+        <div class="title-fm">
+          <p>*** <i class="fa fas fa-grip-lines-vertical" aria-hidden="true"> ^^^</i></p>
+          <p>SVM</p>
+        </div>
+      </div>
+
+      <!-- content -->
+      <!-- <div class="content"> -->
+      <!-- </div> -->
+      
+    </div>
+
+    <div class="section" id="section2">
+      <div class="section-content">
+        <p>SVM (Python on text data)</p>
+        <br>
+        <p class="sub_title"></p>
+        <div class="img_content">
+          <a ><img src="./Python/Python_data.png" alt="" width="300" height="100"></a>
+          <div class="content-sections">
+            <p class="text1">
+              "SVMs takes high accuracy the expense of dataset limitations"
+            </p>
+            <br>
+            <p class="text1">
+              Traditionally, SVMs do not perform well on highly skewed/imbalanced data sets. These are training data sets in which the number of samples that fall in one of the classes far outnumbers those that are a member of the other class.
+            </p>    
+            <br>
+            <p class="text1">
+              Another deficiency is that SVMs are not efficient if the number of features is very huge in number compared to the training samples. As the above code shows, the time of tuning parameters is pretty long even it is based on a small range of grid search CV.
+            </p>   
+            <br>
+            <p class="text1">
+              However, due to the highly convincing mathematical support behind the SVM, it could achieve an ideal accuracy once the conditions are set.
+            </p>   
+            <br>  
+            <a class="link" href="./Python/Python_NB_SVM.html">View Complete report</a>
+            <a class="link" href="./Python/cleaned_twitter_withLabel.csv">Download raw data</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section" id="section3">
+      <div class="section-content">
+        <p>SVM (R on record data)</p>
+        <br>
+        <p class="sub_title"></p>
+        <div class="img_content">
+          <a ><img src="./R/R_data.png" alt="" width="600" height="100"></a>
+          <div class="content-sections">
+            <p class="text1">
+              Compared with the Naive Bayes, SVM’s performance performs worse no matter which kernel is chosen.
+            </p>
+            <br>
+            <p class="text1">
+              As a supervised and math-supported method in machine learning, Support vector machines (SVMs) did not achieve a reasonable prediction. One guessed reason is that since SVM is preferred the linear separable dataset. However, the dataset in this project is mostly not linearly separable.
+            </p>  
+            <br>
+            <p class="text1">
+              The bad prediction of SVM implied a fact that the utility of financial indicators should be reconsidered before it is used for trading.
+            </p>  
+            <br>  
+            <a class="link" href="./R/R_NB_SVM.html">View Complete report</a>
+            <a class="link" href="./R/Crypto_quotes_with_change_label.csv">Download raw data</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- partial -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script><script  src="./elements/background.js"></script>
+    <!-- background.html end -->   
+    
+    <!-- back botton -->
+    <div class="back-button">
+        <p><a class="back-button" href="/index.html">Back</a></p> 
+    </div>
+
+</body>
+</html>

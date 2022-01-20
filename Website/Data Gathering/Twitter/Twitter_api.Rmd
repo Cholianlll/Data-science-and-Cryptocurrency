@@ -1,0 +1,125 @@
+---
+title: "Twitter R_API"
+author: "Cholian Li (Chao Li) cl1486"
+date: "9/14/2021"
+output: html_document
+---
+
+# Introduction
+
+reference : <https://www.rdocumentation.org/packages/rtweet/versions/0.7.0/topics/search_tweets>
+
+# Packages
+
+```{r}
+# load twitter library - the rtweet library is recommended now over twitteR
+library(rtweet)
+# plotting and pipes - tidyverse!
+library(ggplot2)
+library(dplyr)
+# text mining library
+library(tidytext)
+```
+
+# API key for twitter
+
+```{r}
+keys = read.csv('Twitter_API_key.csv')
+
+# whatever name you assigned to your created app
+appname <- keys$appname
+## api key (example below is not a real key)
+key <- keys$key
+## api secret (example below is not a real key)
+secret <- keys$secret
+
+access_token = keys$access_token
+access_secret = keys$access_secret
+```
+
+# Create a token for API
+
+```{r}
+# create token named "twitter_token"
+twitter_token <- create_token(
+  app = appname,
+  consumer_key = key,
+  consumer_secret = secret,
+  access_token = access_token,
+  access_secret = access_secret)
+```
+
+# Gathering data from API
+
+There are two types of data gathering from Twitter API, both are gathering the data related to the keyword.
+
+```{r eval=FALSE, include=FALSE}
+# parameter for seaching twitter
+
+####################  for single research ######################################
+
+# q = "#cryptocurrency"
+# 
+# n = 10 # count
+# until = '2021-09-12'# time
+# 
+# 
+# 
+# response <- search_tweets(q = q,
+#                           n = n,
+#                           include_rts = FALSE,
+#                           until = until,
+#                           retryonratelimit = FALSE)
+
+
+####################  search using multilple queries ############################
+
+q = c("#cryptocurrency", # Keywords
+      "-filter:retweets", # Filter retweets
+      "filter:news", # Filter (return only) tweets with links to news articles via
+      "filter:media") # Filter (return only) tweets with media
+
+# Some other useful query tips:
+#   
+# Exclude retweets via "-filter:retweets"
+# 
+# Exclude quotes via "-filter:quote"
+# 
+# Exclude replies via "-filter:replies"
+# 
+# Filter (return only) verified via "filter:verified"
+# 
+# Exclude verified via "-filter:verified"
+# 
+# Get everything (firehose for free) via "-filter:verified OR filter:verified"
+# 
+# Filter (return only) tweets with links to news articles via "filter:news"
+# 
+# Filter (return only) tweets with media "filter:media"
+
+n = 40000 # count
+until = '2021-09-08'# time
+
+response <- search_tweets2(q=q,n=10,until=until,include_rts = FALSE,retryonratelimit = TRUE)
+
+# retryonratelimit = TRUE works when the limit of one querry exceed the limit.
+# e.g
+# Downloading [=========================================] 100%
+# retry on rate limit...
+# waiting about 13 minutes...
+
+tw_data <- data.frame(response)
+tw_data = apply(tw_data,2,as.character)
+
+write.csv(tw_data,file = 'twitter_data.csv')
+```
+
+# Review the data and save it to csv
+
+```{r}
+# review the data
+tw_data <- read.csv('twitter_data.csv',row.names = 1)
+tw_data[1:5,3:5]
+nrow(tw_data)
+ncol(tw_data)
+```

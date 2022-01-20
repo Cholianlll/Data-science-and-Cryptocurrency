@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+body {
+  font-family: 'Lobster', cursive;
+}
+
+
+p {
+  margin: 0;
+}
+
+.section {
+  background-size: cover;
+  background-position: center;
+}
+
+.section-content {
+  position:relative;
+  top:-20%;
+  text-align: center;
+  font-size: 2.5em;
+  color: #fff;
+}
+
+#section1 {
+  background-color: #e63946;
+}
+
+#section2 {
+  background-color: #457b9d;
+}
+
+#section3 {
+  background-color: #1d3557;
+}
+
+#section4 {
+  background-color: #21828f;
+}
+
+#section5 {
+  background-color: #57969e;
+}
